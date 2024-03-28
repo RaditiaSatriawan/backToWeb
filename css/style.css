@@ -1,0 +1,122 @@
+/* Existing CSS styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.topnav {
+    overflow: hidden;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topnav a {
+    color: black;
+    text-align: center;
+    margin: auto;
+    width: auto;
+    padding: 5px;
+    /* Adjusted padding */
+}
+
+.topnav .active {
+    color: lightgreen;
+    margin-left: 10px;
+    /* Adjusted margin for TRAGENT */
+}
+
+.topnav-right {
+    padding: 5px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    /* Adjust as needed */
+}
+
+.banner {
+    width: 200px;
+    /* Adjust width as needed */
+    height: 200px;
+    /* Adjust height as needed */
+    background-color: lightblue;
+    /* Example background color */
+    margin-right: 20px;
+    /* Add some space between the banner and the contact form */
+}
+
+.contact-form-container {
+    background-color: lightgrey;
+    /* Grey background color */
+    padding: 20px;
+    /* Add padding for spacing */
+    width: 300px;
+    /* Adjust form width as needed */
+    margin-top: 20px;
+    /* Adjust as needed */
+}
+
+.contact-form {
+    /* No specific styles needed */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    /* Add margin between form groups */
+}
+
+label {
+    display: block;
+    /* Make labels block elements */
+    margin-bottom: 5px;
+    /* Add margin between labels and inputs */
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    /* Make inputs and select full width */
+    padding: 8px;
+    /* Add padding */
+    border: 1px solid #ccc;
+    /* Add border */
+    border-radius: 4px;
+    /* Add border radius */
+}
+
+button {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    text-align: center;
+    /* Center the h1 title */
+}

@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Your Travel Agent</title>
 </head>
+
 <body>
-    <h1>Hello World</h1>
-    <hr>
-    Ini Baris 1
-    <br>
-    Ini Baris 2
-
-    <h1>Buah Favoritku</h1>
-    <ol type="1">
-        <li>Jeruk</li>
-        <li>Durian</li>
-        <li>Pepaya</li>
-        <li>Apel</li>
-    </ol>
-
-    <table>
-        <tr>
-            <th>Company</th>
-            <th>Contract</th>
-            <th>Country</th>
-        </tr>
-        <tr>
-            <th>ALfreds</th>
-            <th>Maria</th>
-            <th>Germany</th>
-        </tr>
-        <tr>
-            <td colspan="3">
-                <center>Jakarta</center>
-            </td>
-        </tr>
-        <tr>
-            <th rowspan="3">Jakarta</th>
-            <td> - A - </td>
-            <td> - B - </td>
-            <td> - C - </td>
-        </tr>
-    </table>
+    <div class="topnav">
+        <a class="active" href="#home">TRAGENT</a>
+        <div class="topnav-right">
+            <table>
+                <tr>
+                    <td><a href="">Home</a></td>
+                    <td><a href="">Our Package</a></td>
+                    <td><a href="">Call Us</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr width="100%;" color="lightgrey" size="5">
+    <h1>Your Trusted Travel Agent's</h1>
+    <div class="main-container">
+        <div class="banner">
+            <!-- Square photo banner goes here -->
+        </div>
+        <div class="contact-form-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="interest">Interest:</label>
+                    <select id="interest" name="interest">
+                        <option value="general">General Inquiry</option>
+                        <option value="booking">Booking</option>
+                        <option value="feedback">Feedback</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>
