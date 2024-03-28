@@ -1,4 +1,4 @@
-/* Existing CSS styles */
+/* Reset and General Styles */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -6,105 +6,109 @@ body {
     flex-direction: column;
 }
 
+h1 {
+    text-align: center;
+    padding: 5%;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    height: 5px;
+    background-color: lightgrey;
+    margin: 0;
+}
+
+/* Top Navigation */
 .topnav {
     overflow: hidden;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #f2f2f2;
 }
 
 .topnav a {
-    color: black;
+    float: left;
+    display: block;
+    color: #333;
     text-align: center;
-    margin: auto;
-    width: auto;
-    padding: 5px;
-    /* Adjusted padding */
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-.topnav .active {
-    color: lightgreen;
-    margin-left: 10px;
-    /* Adjusted margin for TRAGENT */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .topnav-right {
-    padding: 5px;
+    float: right;
 }
 
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-}
-
-
+/* Main Container */
 .main-container {
     display: flex;
     justify-content: center;
+    /* Center items horizontally */
     align-items: flex-start;
-    flex-wrap: wrap;
     margin-top: 20px;
-    /* Adjust as needed */
 }
 
+/* Banner */
 .banner {
-    width: 200px;
-    /* Adjust width as needed */
-    height: 200px;
-    /* Adjust height as needed */
-    background-color: lightblue;
-    /* Example background color */
-    margin-right: 20px;
-    /* Add some space between the banner and the contact form */
+    overflow: hidden;
+    /* Ensure only one image is visible at a time */
+    flex: 0 0 calc(75% - 25px);
+    /* Take 75% of the available space and subtract the space between */
+    margin-right: 25px;
+    /* Add space to the right of the banner */
 }
 
+.banner img {
+    width: 80%;
+    /* Ensure image fills the banner */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Adjust the position of the images */
+.banner img {
+    display: block;
+    /* Ensure each image takes up the full width of its container */
+}
+
+/* Form and Form Elements */
 .contact-form-container {
-    background-color: lightgrey;
-    /* Grey background color */
-    padding: 20px;
+    flex: 0 0 calc(25% - 25px);
+    /* Take 50% of the available space and subtract the space between */
+    margin-left: 25px;
+    /* Add space to the left of the form */
+    background-color: lightgray;
+    /* Background color for the form container */
+    padding: 50px;
     /* Add padding for spacing */
-    width: 300px;
-    /* Adjust form width as needed */
-    margin-top: 20px;
-    /* Adjust as needed */
-}
-
-.contact-form {
-    /* No specific styles needed */
+    margin-right: 100px;
 }
 
 .form-group {
     margin-bottom: 15px;
-    /* Add margin between form groups */
 }
 
 label {
     display: block;
-    /* Make labels block elements */
     margin-bottom: 5px;
-    /* Add margin between labels and inputs */
 }
 
 input[type="text"],
 input[type="email"],
 select {
     width: 100%;
-    /* Make inputs and select full width */
     padding: 8px;
-    /* Add padding */
     border: 1px solid #ccc;
-    /* Add border */
     border-radius: 4px;
-    /* Add border radius */
 }
 
 button {
     background-color: #4CAF50;
-    /* Green */
     color: white;
     padding: 10px 15px;
     border: none;
@@ -116,7 +120,18 @@ button:hover {
     background-color: #45a049;
 }
 
-h1 {
-    text-align: center;
-    /* Center the h1 title */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        /* Center items vertically */
+    }
+
+    .banner,
+    .contact-form-container {
+        width: 90%;
+        margin-right: 0;
+        margin-left: 0;
+    }
 }
